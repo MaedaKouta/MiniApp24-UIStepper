@@ -9,11 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet weak var numLavel: UILabel!
 
+    @IBAction func didTapStepper(_ sender: UIStepper) {
+        let num = Int(sender.value)
+        numLavel.text = String(num)
+    }
 
 }
 
